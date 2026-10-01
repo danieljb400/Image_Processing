@@ -1,4 +1,5 @@
 How to Run this File:
+
   -First you must open the terminal to navigate to the folder with the .pmg and C code
   -Then open type in the terminal gcc <name_of_file>.c
   -Finally when you look within the folder there is a new file a.out
