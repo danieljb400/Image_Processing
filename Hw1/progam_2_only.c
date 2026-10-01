@@ -21,8 +21,13 @@ int main(int argc, char *argv[]){
         printf("didn't open");
         return 1;
     }
+	// takes in the data into variables
     if(3!=fscanf(iFile, "P5 %d %d %d ", &sizeX, &sizeY, &levels)) return 1;
+	
+	//allocates the size of the image for an array
     image=(unsigned char *) malloc(sizeX*sizeY);
+	
+	//reads in the data into the image array
     fread(image,sizeof(unsigned char),sizeX*sizeY,iFile);
     fclose(iFile);
 

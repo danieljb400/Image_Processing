@@ -20,12 +20,18 @@ int main(int argc, char *argv[]){
     fread(image, sizeof(unsigned char), sizeX*sizeY, file);
     fclose(file); 
 
+	//Convert image array into a matrix
     imageTemp = (unsigned char *) malloc((sizeX/2)*(sizeY/2));
+	
+	//Convert image array into a matrix
     unsigned char processedImage [sizeY][sizeX];
+	
+	//This line copies a 1D array into an 2D array 
     memcpy(processedImage, image, sizeX*sizeY*sizeof(unsigned char));
     
     k=0;
-    
+	
+    //makes a for loop to only copy every even number in each array
     for(unsigned int i = 0; i<sizeY; i++){
         for(unsigned int j = 0; j<sizeX; j++){
             if((i%2==0) && (j%2==0)){
